@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+    <script src="ml5.min.js"></script>
+    <script src="webcam.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+<body>
+  <div class="container"  >
+    <center>
+        <h3 class="btn btn-default heading">reconocimiento de imagen</h3>
+        <br>
+        <br>
+        <p>este modelo esta entrenado para identificar los siguientes objetos</p>
+         <b class="name_of_objects">
+  MOGLY
+  <hr>
+  INKACOLA
+  <hr>
+  CERVEZA
+  <hr>
+</b>
+      <label>Vista de la cámara: </label>
+<!--PASO 3 Agregar la vista de cámara-->
+<div id="camera"></div>
+      <br><br>
+<!--PASO 4 añadir un div para contener la imagen capturada por la cámara web-->
+<div id="result"></div>
+
+      <br><br>
+<!--PASO 5 boton para capturar imagen-->
+<button onclick="take_snapshot();" class="btn btn-info">Capturar Imagen</button>
+      <br><br>
+<!--PASO 6 boton para comparar imagen-->
+<button onclick="check();" class="btn btn-success">Identificar Imagen</button>
+      <br><br>
+<!--etiqueta span para contener el nombre del objeto que
+obtendremos después de comparar la imagen capturada con el modelo.
+-->
+      <p style="font-size: 22px;">Objeto: <span id="result_object_name"></span> </p>
+      <p style="font-size: 22px;">Precisión: <span id="result_object_accuracy"></span> </p>
+    </center>
+
+    </center>
+  </div>
+
+</body>
+</html>
